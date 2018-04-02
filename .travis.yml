@@ -1,12 +1,15 @@
 language: java
 jdk:
-  - openjdk7
+  - oraclejdk7
 
 deploy:
   provider: heroku
   api_key:
-    secure: f4aa8133-ae18-483c-922d-5e8a637720e8
+    secure: 3bba8f26-0511-413e-b1b4-25fa2fa23509
   app: oms-apps1
+  on:
+    repo: orest77/oms-heroku
+
 
 #  script : heroku war:deploy
 
@@ -37,3 +40,5 @@ before_script:
 #  sauce_connect:
 #    username: your_username
 #    access_key: your_sauce_access_key
+
+#web: java $JAVA_OPTS -jar .../webapp-runner.jar --expanded-dir-name $WAR_DIR --expand-war --port $PORT *.war
