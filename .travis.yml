@@ -1,0 +1,39 @@
+language: java
+jdk:
+  - openjdk7
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: f4aa8133-ae18-483c-922d-5e8a637720e8
+  app: oms-apps1
+
+#  script : heroku war:deploy
+
+
+services: 
+  - mariadb
+before_script:
+  - mysql -u root -e 'CREATE DATABASE oms;'
+  - mysql -u root -e "CREATE USER 'user_db'@'localhost' IDENTIFIED BY 'SUPER123pass';"
+  - mysql -u root -e "GRANT ALL ON oms.* TO 'user_db'@'localhost';"
+
+
+# web: java $JAVA_OPTS -jar target/*.war skip_cleanup: true   skip_cleanup: true  oms-apps1
+   
+#- psql -c 'CREATE DATABASE oms;' -U postgres
+#  - psql -c "CREATE USER user_db with encrypted password 'SUPER123pass';" -U postgres
+#  - psql -c 'REVOKE CONNECT ON DATABASE oms FROM PUBLIC;' - U postgres
+#  - psql -c "grant all privileges on database oms to user_db;" -U postgres
+#  - psql -c 'CREATE USER user_db with password SUPER123pass;' -U postgres
+#  - psql -c 'GRANT ALL ON oms.* TO user_db;' -U postgres
+
+#  on:
+#    repo: oms-apps1
+
+#before_script:
+#  - psql -c 'create database travis_ci_test;' -U postgres
+#  addons:
+#  sauce_connect:
+#    username: your_username
+#    access_key: your_sauce_access_key
