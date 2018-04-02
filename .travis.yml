@@ -1,18 +1,15 @@
 language: java
 jdk:
   - oraclejdk7
-
 deploy:
   provider: heroku
   api_key:
     secure: 3bba8f26-0511-413e-b1b4-25fa2fa23509
   app: oms-apps1
-  on:
-    repo: orest77/oms-heroku
+  
 
 
 #  script : heroku war:deploy
-
 
 services: 
   - mariadb
