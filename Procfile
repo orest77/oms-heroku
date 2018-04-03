@@ -1,1 +1,1 @@
-web: java -cp target/classes:target/dependency/* com.softserveinc.edu.oms
+web: java -jar target/OMS.war
