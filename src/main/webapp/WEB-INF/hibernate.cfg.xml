@@ -12,13 +12,13 @@
 
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> 
-		<property name="hibernate.connection.url">${env.JDBC_URL}</property>
-		<property name="hibernate.connection.username">${env.USER}</property>
-		<property name="hibernate.connection.password">${env.PASSWORD}</property>
+		<property name="hibernate.connection.url">${JDBC_URL}</property>
+		<property name="hibernate.connection.username">${USER}</property>
+		<property name="hibernate.connection.password">${PASSWORD}</property>
 
-		<property name="hibernate.hbm2ddl.auto">create</property>
+		<property name="hibernate.hbm2ddl.auto">thread</property>
 
-		<property name="show_sql">true</property> <property name="format_sql">true</property>
+		<!--<property name="show_sql">true</property> <property name="format_sql">true</property> -->
 		<mapping class="com.softserveinc.edu.oms.domain.entities.Role" />
 		<mapping class="com.softserveinc.edu.oms.domain.entities.Region" />
 		<mapping class="com.softserveinc.edu.oms.domain.entities.CustomerType" />
