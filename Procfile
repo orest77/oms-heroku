@@ -1,1 +1,1 @@
-web: target/start -Dhttp.port=$PORT
+web: target/OMS.war -Dhttp.port=$PORT
