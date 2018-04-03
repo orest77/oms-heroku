@@ -117,7 +117,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.2.11.Final</version>
+            <version>3.6.5.Final</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
@@ -192,7 +192,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>5.4.2.Final</version>
+            <version>4.2.0.Final</version>
         </dependency>
         <dependency>
             <groupId>javax.validation</groupId>
@@ -288,7 +288,7 @@
                             <artifactItem>
                                 <groupId>com.github.jsimone</groupId>
                                 <artifactId>webapp-runner</artifactId>
-                                <version>7.0.82.0</version>
+                                <version>8.5.27.0</version>
                                 <destFileName>webapp-runner.jar</destFileName>
                             </artifactItem>
                         </artifactItems>
