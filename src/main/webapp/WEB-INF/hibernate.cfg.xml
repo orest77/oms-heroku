@@ -12,8 +12,8 @@
 
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> 
-		<!--<property name="hibernate.connection.url">jdbc:${JDBC_URL}</property>
-		<property name="hibernate.connection.username">${USER}</property>
+		<property name="hibernate.connection.url">jdbc:${JDBC_URL}</property>
+		<!--<property name="hibernate.connection.username">${USER}</property>
 		<property name="hibernate.connection.password">${PASSWORD}</property> -->
 
 		<property name="hibernate.hbm2ddl.auto">create</property>
