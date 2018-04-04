@@ -3,16 +3,12 @@
                                          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 
 
-
-
-
-
-<bean class="java.net.URI" id="dbUrl">
-    <constructor-arg value="#{systemEnvironment['CLEARDB_DATABASE_URL']}"/>
-</bean>
-
 <hibernate-configuration>
 	<session-factory>
+		<bean class="java.net.URI" id="dbUrl">
+    		<constructor-arg value="#{systemEnvironment['CLEARDB_DATABASE_URL']}"/>
+		</bean>
+
 
 
 		<!-- /MYPC:1433/Blog;instance=SQLEXPRESS local connection properties -->
