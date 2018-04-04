@@ -3,6 +3,18 @@
                                          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 
 
+
+
+<bean class="java.net.URI" id="dbUrl">
+    <constructor-arg value="#{systemEnvironment['CLEARDB_DATABASE_URL']}"/>
+</bean>
+
+<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+    <property name="url" value="#{ 'jdbc:mysql://' + @dbUrl.getHost() + @dbUrl.getPath() }"/>
+    <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }"/>
+    <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
+</bean>
+
 <hibernate-configuration>
 	<session-factory>
 		
@@ -13,9 +25,9 @@
 
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> 
-		<property name="hibernate.connection.url">${CLEARDB_DATABASE_URL}</property>
+	<!--	<property name="hibernate.connection.url">${CLEARDB_DATABASE_URL}</property>
 		<property name="hibernate.connection.username">${USER}</property>
-		<property name="hibernate.connection.password">${PASSWORD}</property>
+		<property name="hibernate.connection.password">${PASSWORD}</property> -->
 
 		<property name="hibernate.hbm2ddl.auto">create</property>
 
