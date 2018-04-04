@@ -12,10 +12,10 @@
 		<!--<property name="hibernate.connection.url">jdbc:jtds:sqlserver://streamer2005.softserveinc.com/_055_OMS;instance=tc;</property>-->
 
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property> 
-		<property name="hibernate.connection.url">${CLEARDB_DATABASE_URL}</property>
-		<property name="hibernate.connection.username"></property>
-		<property name="hibernate.connection.password"></property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> 
+		<property name="hibernate.connection.url">${JDBC_URL}</property>
+		<property name="hibernate.connection.username">${USER}</property>
+		<property name="hibernate.connection.password">${PASSWORD}</property>
 
 		<property name="hibernate.hbm2ddl.auto">create</property>
 
