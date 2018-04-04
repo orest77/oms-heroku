@@ -281,7 +281,7 @@
                         <id>install</id>
                         <phase>install</phase>
                         <goals>
-                            <goal>source</goal>
+                            <goal>sources</goal>
                         </goals>
                         <configuration>
                         <artifactItems>
