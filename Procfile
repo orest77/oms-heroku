@@ -1,1 +1,1 @@
-web:    java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT --session-store memcache target/*.war
+# web: java $JAVA_OPTS -jar .../webapp-runner.jar --expanded-dir-name $WAR_DIR --expand-war --port $PORT *.war
