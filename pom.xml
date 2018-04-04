@@ -279,9 +279,9 @@
                 <executions>
                     <execution>
                         <id>install</id>
-                        <phase>install</phase>
+                        <phase>package</phase>
                         <goals>
-                            <goal>sources</goal>
+                            <goal>copy</goal>
                         </goals>
                         <configuration>
                         <artifactItems>
