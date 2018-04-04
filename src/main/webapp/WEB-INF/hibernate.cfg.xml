@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
                                          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+
+
+
+
+
+<bean class="java.net.URI" id="dbUrl">
+    <constructor-arg value="#{systemEnvironment['CLEARDB_DATABASE_URL']}"/>
+</bean>
+
 <hibernate-configuration>
 	<session-factory>
 
@@ -12,9 +22,9 @@
 
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> 
-		<property name="hibernate.connection.url">jdbc:mysql://be2fc6f5cba602:79c7eae9@us-cdbr-iron-east-05.cleardb.net/heroku_eb81e4954202186?reconnect=true</property>
-		<property name="hibernate.connection.username">79c7eae9</property>
-		<property name="hibernate.connection.password">be2fc6f5cba602</property>
+		<property name="hibernate.connection.url">#{ 'jdbc:mysql://' + @dbUrl.getHost() + @dbUrl.getPath() }</property>
+		<property name="hibernate.connection.username">#{ @dbUrl.getUserInfo().split(':')[0] }</property>
+		<property name="hibernate.connection.password">#{ @dbUrl.getUserInfo().split(':')[1] }</property>
 
 		<property name="hibernate.hbm2ddl.auto">create</property>
 
