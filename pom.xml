@@ -278,8 +278,8 @@
                 <version>3.0.2</version>
                 <executions>
                     <execution>
-                        <id>install</id>
-                        <phase>install</phase>
+                        <!-- <id>install</id> -->
+                        <phase>package</phase>
                         <goals>
                             <goal>sources</goal>
                         </goals>
