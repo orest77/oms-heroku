@@ -279,10 +279,9 @@
                 <executions>
                     <execution>
                         <!--<id>install</id>-->
-                        <id>copy-dependencies</id>
                         <phase>package</phase>
                         <goals>
-                            <goal>copy-dependencies</goal>
+                            <goal>copy</goal>
                         </goals>
                         <configuration>
                         <artifactItems>
