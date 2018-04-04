@@ -282,6 +282,7 @@
                         <phase>package</phase>
                         <goals>
                             <goal>copy</goal>
+                             <goal>sources</goal>
                         </goals>
                         <configuration>
                         <artifactItems>
