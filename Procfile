@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/*.war
+web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar -Dhibernate.connection.url=$JDK_URL" --port $PORT   target/*.war
