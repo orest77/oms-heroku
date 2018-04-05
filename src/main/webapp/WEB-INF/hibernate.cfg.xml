@@ -13,8 +13,8 @@
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> 
 		<property name="hibernate.connection.url">jdbc:mysql://${JDBC_URL}</property>
-		<property name="hibernate.connection.username">${PASSWORD}</property>
-		<property name="hibernate.connection.password">${URL_USER}</property>
+		<property name="hibernate.connection.username">${URL_USER}</property>
+		<property name="hibernate.connection.password">${PASSWORD}</property>
 
 		<property name="hibernate.hbm2ddl.auto">thread</property>
 
