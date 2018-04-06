@@ -16,7 +16,7 @@
 		<property name="hibernate.connection.username">$URL_USER</property>
 		<property name="hibernate.connection.password">$PASSWORD</property>
 
-		<property name="hibernate.hbm2ddl.auto">thread</property>
+		<property name="hibernate.hbm2ddl.auto">validate</property>
 
 		<!--<property name="show_sql">true</property> <property name="format_sql">true</property> thread-->
 		<mapping class="com.softserveinc.edu.oms.domain.entities.Role" />
