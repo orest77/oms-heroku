@@ -12,9 +12,9 @@
 
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> 
-		<property name="hibernate.connection.url">jdbc:mysql://${database_url}</property>
-		<property name="hibernate.connection.username">${url_user}</property>
-		<property name="hibernate.connection.password">${password}</property>
+		<property name="hibernate.connection.url">jdbc:mysql://${BD_HOST}/${BD_NAME}?reconnect=true</property>
+		<property name="hibernate.connection.username">${URL_USER}</property>
+		<property name="hibernate.connection.password">${PASSWORD}</property>
 
 		<property name="hibernate.hbm2ddl.auto">validate</property>
 
