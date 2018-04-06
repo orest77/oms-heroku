@@ -15,9 +15,6 @@
     		<constructor-arg value="#{systemEnvironment['CLEARDB_DATABASE_URL']}"/>
 		</bean>
 
-		<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-    
-		</bean>
 
 
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
@@ -40,7 +37,6 @@
 		<mapping class="com.softserveinc.edu.oms.domain.entities.Dimension" />
 		<mapping class="com.softserveinc.edu.oms.domain.entities.OrderItem" />
 		<mapping class="com.softserveinc.edu.oms.domain.entities.CreditCardType" />
-		</bean>
 	</session-factory>
 </hibernate-configuration>
 
