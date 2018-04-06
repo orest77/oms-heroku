@@ -11,7 +11,7 @@
 		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property> -->
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> 
-		<property name="hibernate.connection.url">jdbc:$TR_DB</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/oms</property>
 		<property name="hibernate.connection.username">user_db</property>
 		<property name="hibernate.connection.password">SUPER123pass</property>
 
