@@ -10,20 +10,12 @@
 		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL96Dialect</property> -->
 		<!--<property name="hibernate.connection.url">jdbc:jtds:sqlserver://streamer2005.softserveinc.com/_055_OMS;instance=tc;</property>-->
 
-
-		<bean class="java.net.URI" id="dbUrl">
-    		<constructor-arg value="#{systemEnvironment['CLEARDB_DATABASE_URL']}"/>
-		</bean>
-
-
-
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> 
-		<property name="hibernate.connection.url">#{ 'jdbc:mysql://' + @dbUrl.getHost() + @dbUrl.getPath() }</property>
-		<property name="hibernate.connection.username">#{ @dbUrl.getUserInfo().split(':')[0] }</property>
-		<property name="hibernate.connection.password">#{ @dbUrl.getUserInfo().split(':')[1] }</property>
+		<property name="hibernate.connection.url">jdbc:mysql://${env.DATABASE_URL}</property>
+		<property name="hibernate.connection.username">${env.URL_USER}</property>
+		<property name="hibernate.connection.password">${env.PASSWORD}</property>
 
-		
 		<property name="hibernate.hbm2ddl.auto">validate</property>
 
 		<!--<property name="show_sql">true</property> <property name="format_sql">true</property> thread-->
