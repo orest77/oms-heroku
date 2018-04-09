@@ -13,10 +13,10 @@
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> 
 		<property name="hibernate.connection.url">${datadase_url}</property>
-		<property name="hibernate.connection.username"></property>
-		<property name="hibernate.connection.password"></property>
+		<!--<property name="hibernate.connection.username">${url_user}</property>
+		<property name="hibernate.connection.password">${pass}</property> -->
 
-		<property name="hibernate.hbm2ddl.auto">validate</property>
+		<property name="hibernate.hbm2ddl.auto">thread</property>
 		<!--<property name="connection.pool_size">10</property> -->
 		<!--<property name="show_sql">true</property> <property name="format_sql">true</property> thread-->
 		<mapping class="com.softserveinc.edu.oms.domain.entities.Role" />
