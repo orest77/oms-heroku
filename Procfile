@@ -1,1 +1,1 @@
-web: java -Ddatadase_url=$DATABASE_URL -Dpass=$PASSWORD -Durl_user=$URL_USER -jar target/dependency/liquibase.jar --changeLogFile=src/main/resources/db/changelog/db.changelog-master.yaml --url=$JDBC_DATABASE_URL --classpath=target/dependency/postgres.jar update $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/*.war
+web: java -Ddatadase_url=$CLEARDB_DATABASE_URL  $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/*.war
