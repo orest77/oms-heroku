@@ -14,7 +14,7 @@
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> 
 		<property name="hibernate.connection.url">jdbc:${database_url}</property>
 		<property name="hibernate.connection.username">${url_user}</property>
-		<property name="hibernate.connection.password">${usr_pass}</property>
+		<property name="hibernate.connection.password">${usl_pass}</property>
 
 		<property name="hibernate.hbm2ddl.auto">validate</property>
 
