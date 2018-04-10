@@ -12,9 +12,9 @@
 
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> 
-		<property name="hibernate.connection.url">jdbc:mysql://us-cdbr-iron-east-05.cleardb.net/heroku_eb81e4954202186</property>
-		<property name="hibernate.connection.username">be2fc6f5cba602</property>
-		<property name="hibernate.connection.password">79c7eae9</property>
+		<property name="hibernate.connection.url">jdbc:mysql://us-cdbr-iron-east-05.cleardb.net/heroku_41277af96f3a4ca?reconnect=true</property>
+		<property name="hibernate.connection.username">b65d1313afaf68</property>
+		<property name="hibernate.connection.password">a5d11402</property>
 
 		<property name="hibernate.hbm2ddl.auto">validate</property>
 
