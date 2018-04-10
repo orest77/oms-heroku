@@ -12,15 +12,17 @@
 
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> 
-		<property name="hibernate.connection.url">jdbc:mysql://us-cdbr-iron-east-05.cleardb.net/heroku_41277af96f3a4ca?reconnect=true</property>
-		<property name="hibernate.connection.username">b65d1313afaf68</property>
-		<property name="hibernate.connection.password">a5d11402</property>
+		<property name="hibernate.connection.url">jdbc:${database_url}</property>
+		<property name="hibernate.connection.username">${url_user}</property>
+		<property name="hibernate.connection.password">${usr_pass}</property>
 
 		<property name="hibernate.hbm2ddl.auto">validate</property>
 
 		<!--<property name="hibernate.timeout">180</property>-->
-		<!--<property name="connection.pool_size">2</property> -->
-		<!--<property name="show_sql">true</property> <property name="format_sql">true</property> thread-->
+		<property name="connection.pool_size">1</property>
+		 <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+		 <property name="jdbc.batch_size">0</property>
+		<property name="show_sql">true</property> <property name="format_sql">true</property>
 		<mapping class="com.softserveinc.edu.oms.domain.entities.Role" />
 		<mapping class="com.softserveinc.edu.oms.domain.entities.Region" />
 		<mapping class="com.softserveinc.edu.oms.domain.entities.CustomerType" />
