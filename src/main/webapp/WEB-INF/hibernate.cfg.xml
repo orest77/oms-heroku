@@ -16,7 +16,7 @@
 		<property name="hibernate.connection.username">b65d1313afaf68</property>
 		<property name="hibernate.connection.password">a5d11402</property>
 
-		<property name="hibernate.hbm2ddl.auto">validate</property>
+		<property name="hibernate.hbm2ddl.auto">create</property>
 
 		<!--<property name="hibernate.timeout">180</property>-->
 		<!--<property name="connection.pool_size">2</property> -->
