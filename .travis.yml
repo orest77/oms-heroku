@@ -9,6 +9,9 @@ deploy:
   on:
     repo: orest77/oms-heroku
 
+  run:
+     - restart
+
 services: 
   - mariadb
 before_script:
@@ -17,3 +20,6 @@ before_script:
   - mysql -u root -e "GRANT ALL ON oms.* TO 'user_db'@'localhost';"
 
 
+
+#after_deploy:
+#  - wget -qO- https://toolbelt.heroku.com/install.sh | sh
