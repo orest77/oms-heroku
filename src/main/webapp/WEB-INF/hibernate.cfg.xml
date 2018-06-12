@@ -16,7 +16,7 @@
 		<property name="hibernate.connection.username">${url_user}</property>
 		<property name="hibernate.connection.password">${url_pass}</property>
 
-		<property name="hibernate.hbm2ddl.auto">validate</property>
+		<property name="hibernate.hbm2ddl.auto">creat</property>
 
 		<!--<property name="hibernate.timeout">180</property>-->
 		<property name="connection.pool_size">1</property>
